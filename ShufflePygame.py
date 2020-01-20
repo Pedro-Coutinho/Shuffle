@@ -322,7 +322,8 @@ def levels (grid):
                 vezeserrado = 0
             else:
                 vezeserrado += 1
-                pontos = pontos - (vezeserrado * 20)
+                if vezeserrado > 1:
+                    pontos = pontos - ((vezeserrado-1) * 20)
             nCartasViradas = 0
             cartasbool = [False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False,False, False,False, False]
             pygame.time.wait(timeToWait)
